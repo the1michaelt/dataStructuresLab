@@ -1,7 +1,7 @@
 import implementation
 
 # Task 1a
-implementation.month_of_Pi(months)
+implementation.month_of_Pi()
 
 # Task 1b
 implementation.print_favorite_fruits_veggies()

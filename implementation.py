@@ -1,10 +1,9 @@
-months=("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 
-
-def month_of_Pi(months):
+def month_of_Pi():
     """
     Task 1a: Tuple is the best data strategy for months of the year which will never change.
     """
+    months=("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
     count= 0
     stop= len(months)-1
     while count <= stop:
@@ -23,9 +22,6 @@ def month_of_Pi(months):
 # #       print(f"The Pi Month is {months[correct_month_number - 1]}")
 
 
-month_of_Pi(months)
-
-
 def print_favorite_fruits_veggies():
     """
     Task 1b: Set is the best data strategy for SEPARATE SOURCES, collated together.
@@ -40,9 +36,6 @@ def print_favorite_fruits_veggies():
 
     for produce in five_fruits_or_vegetables:
         print(produce)
-
-print_favorite_fruits_veggies()
-
 
 # user_profile = {}.
 # The profile should consist of the following information:
@@ -67,7 +60,6 @@ def print_profile():
     # print(keys)
     values = user_profile.values()
     print(values)
-print_profile()
 
 
 # task 2:
@@ -75,39 +67,14 @@ def print_relative_profile():
     """
     Task 2 uses nested dictionaries to collect multiple users' data.
     """
-    relatives_profile = {"close_kin": [{"First_Name": "Joe", "Relation_to_me": "brother", },
-                                       {"First_Name": "Sue", "Relation_to_me": "mother", },
-                                       {"First_Name": "Boe", "Relation_to_me": "father", }, ], }
-
+    relatives_profile = {"close_kin": [{"First_Name": "Joe", "Last_Name": "Moe", "Relation_to_me": "brother", },
+                                        {"First_Name": "Sue","Last_Name": "Moe", "Relation_to_me": "mother", },
+                                       {"First_Name": "Boe", "Last_Name": "Moe", "Relation_to_me": "father", },
+                                       ], }
+    # values = {close_kin}.pop("Last_Name") #did not work
+    # relatives_profile = relatives_profile{close_kin}.pop("Last_Name")
     print('\nTask 2: Iterate through the list, printing first name and relationship')
-    # for key, value in relatives_profile:
-    #     print(f"{key}:{value}")
-    print(relatives_profile["close_kin"]["First_Name"])
+    for _ in relatives_profile:
+        print(relatives_profile["close_kin"],end="; ") #does not pop out Last name
 
 
-print_relative_profile()
-
-# TEST
-
-
-def print_relative_profile():
-    """_summary_
-    """
-    user_profile = {
-        "First_Name": "Joe",
-        "Last_Name": "Moe",
-        "Email_Address": "nomojoemoe@yafoo.com",
-        "Phone_Number": "03030300303",
-        "Relation_to_me": "brother",
-    }
-
-#     # print(user_profile["First_Name"])
-#     print('\nTask 2: Dictionary: iterate through the list, printing first name and relationship')
-#     for relative in user_profile.values():
-#         print(relative)
-
-
-items = user_profile.items(user_profile[0], user_profile[4])
-print(items)
-
-print_relative_profile()

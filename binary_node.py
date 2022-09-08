@@ -1,8 +1,9 @@
 class BinaryNode:
     def __init__():
-        self.data
-        self.left
-        self.right
+        pass
+        # self.data =
+        # self.left =
+        # self.right =
     
     def insert_node():
         pass

@@ -73,7 +73,7 @@ def print_relative_profile():
                                        ], }
     # values = {close_kin}.pop("Last_Name") #did not work
     # relatives_profile = relatives_profile{close_kin}.pop("Last_Name")
-    print('\nTask 2: Iterate through the list, printing first name and relationship')
+    # print('\nTask 2: Iterate through the list, printing first name and relationship')
     for _ in relatives_profile:
         print(relatives_profile["close_kin"],end="; ") #does not pop out Last name
 

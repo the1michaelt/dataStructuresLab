@@ -1,6 +1,6 @@
 # import implementation
 from linked_list import LinkedList
-import binary_node
+from binary_node import BinaryNode
 
 # # Task 1a
 # implementation.month_of_Pi()
@@ -19,6 +19,7 @@ import binary_node
 class RunMain:
     def __init__(self) -> None:
         self.my_list = LinkedList()
+        self.my_tree = BinaryNode(64)
         
     def append_nodes(self):
         print("\nAdd a new node with the value of 5")
@@ -33,17 +34,26 @@ class RunMain:
         print(self.my_list.find_node(10))
         print("\nSearch a new node with the value of 22")
         print(self.my_list.find_node(22))
+
+# Task 2:
+    def insert_binary_values(self):
+        print("\n\n === Binary Tree: Insertion Activity===")
+        self.data = BinaryNode(77)
+        self.data.insert_node(32)
+        self.data.insert_node(62)
+        self.data.insert_node(89)
+        self.data.insert_node(12)
+        self.data.insert_node(77)
+        self.data.insert_node(61)
         
-# RunMain.append_nodes(self)
-# RunMain.find_values(self)
- 
+    # def search_binary_values(self):
+    #     print("\nSearch a new node with the value of 32")
+    #     self.data.search_for_node(self.data, 32)
+
 if __name__ == '__main__':
     main= RunMain()
-    main.append_nodes()
-    main.find_values()
+    # main.append_nodes() #linked list
+    # main.find_values() #linked list
+    main.insert_binary_values() #binary search tree
+    main.search_binary_values() #binary search tree
             
-# linked_list.find_node()
-
-# binary_node.insert_node()
-        
-# binary_node.search_for_node()

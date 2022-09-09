@@ -24,10 +24,9 @@ class LinkedList:
         current_node = self.head.value #Starting point 
         while current_node is not None: # while there is another node; 28 minutes into the video
         # move node by node. As long as next is not empty
-        # # self.head.value
             if value_to_find != self.head.value: #returns true on any value that is not the head
                 return True  # # if a node has it, return True
             else:
-                return False # # if no node has it, return False
-        current_node = current_node.next
-
+                current_node = current_node.next
+            
+            return False  # if no node has it, return False
